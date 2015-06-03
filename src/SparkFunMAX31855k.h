@@ -1,22 +1,20 @@
-/********************************** max31855k.h *********************************
- * Library to read temperature from a MAX6675 type K thermocouple digitizer   *
- *                                                                            *
- * SO output format:                                                          *
- * 16 bits                                                                    *
- * The first bit, D15, is a dummy sign bit and is always zero.                *
- * Bits D14–D3 contain the converted temperature in the order of MSB to LSB.  *
- * Bit D2 is normally low and goes high when the thermocouple input is open.  *
- * D1 is low to provide a device ID for the MAX6675 and bit D0 is tri-state.  *
- *                                                                            *
- * The method read_temp(max31855k::unit) takes a parameter which determines the *
- * unit of temperature returned.                                              *
- * max31855k::C will return degrees Celsius                                     *
- * max31855k::K will return degrees Kelvin                                      *
- * max31855k::F will return degrees Fahrenheit                                  *
- * max31855k::R will return degrees Rankine                                     *
- *                                                                            *
- *                                                                            *
- *****************************************************************************/
+/********************************** max31855k.h ********************************
+ * Library to read temperature from a MAX6675 type K thermocouple digitizer    *
+ *                                                                             *
+ * SO output format:                                                           *
+ * 16 bits                                                                     *
+ * The first bit, D15, is a dummy sign bit and is always zero.                 *
+ * Bits D14:D3 contain the converted temperature in the order of MSB to LSB.   *
+ * Bit D2 is normally low and goes high when the thermocouple input is open.   *
+ * D1 is low to provide a device ID for the MAX6675 and bit D0 is tri-state.   *
+ *                                                                             *
+ * The method read_temp(max31855k::unit) takes a parameter which determines    *
+ * the unit of temperature returned.                                           *
+ * max31855k::C will return degrees Celsius                                    *
+ * max31855k::K will return degrees Kelvin                                     *
+ * max31855k::F will return degrees Fahrenheit                                 *
+ * max31855k::R will return degrees Rankine                                    *
+ *******************************************************************************/
 #ifndef _SPARKFUN_MAX31855K_h_
 #define _SPARKFUN_MAX31855K_h_
 

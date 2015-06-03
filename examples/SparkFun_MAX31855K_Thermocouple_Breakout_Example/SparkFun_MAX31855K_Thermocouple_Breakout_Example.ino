@@ -18,7 +18,7 @@
  *                                                                             *
  *                                                                             *
  * Development environment specifics:                                          *
- * 1.6.3                                                                       *
+ * 1.6.4                                                                       *
  * Arduino Pro Mini 328 3.3V/8MHz                                              *
  *                                                                             *
  * This code is beerware; if you see me (or any other SparkFun employee) at    *
@@ -41,11 +41,14 @@ SparkFunMAX31855k probe(CHIP_SELECT_PIN, VCC, GND);
 void setup() {
   Serial.begin(9600);
   Serial.println("\nBeginning...");
-  delay(50);  // Let IC 'boot' or first readings will be garbage
+  delay(50);  // Let IC stabilize or first readings will be garbage
 }
 
 void loop() {
   float temperature = probe.readCJT();
+  
+  // Read methods return NAN if they don't have a valid value to return.
+  // The following conditionals only print the value if it's not NAN.
   if (!isnan(temperature)) {
     Serial.print("CJT is (˚C): ");
     Serial.println(temperature);
@@ -62,14 +65,14 @@ void loop() {
   temperature = probe.readTempF();
   if (!isnan(temperature)) {
     Serial.print("\tTemp[F]=");
-    Serial.println(temperature);
+    Serial.print(temperature);
   }
 
   // Read the temperature in Kelvin
   temperature = probe.readTempK();
   if (!isnan(temperature)) {
     Serial.print("\tTemp[K]=");
-    Serial.println(temperature);
+    Serial.print(temperature);
   }
 
   // Read the temperature in Rankine

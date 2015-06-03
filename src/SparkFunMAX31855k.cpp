@@ -12,7 +12,7 @@
 // Input        : uint8_t _cs: The Arduino pin number of the chip select line
 //                for this instance
 //                uint8_t _sck: The Arduino pin number of the SPI clock
-//                uint8_t _so: The Arduino pin number of the SPI MISO
+//                uint8_t _so:  The Arduino pin number of the SPI MISO
 //                uint8_t _vcc: The Arduino pin number to source the power
 //                uint8_t _gnd: The Arduino pin number to sink the power
 // Output       : Instance of this class with pins configured
@@ -76,8 +76,8 @@ void SparkFunMAX31855k::readBytes(void)
 
 ////////////////////////////////////////////////////////////////////////////////
 // Description  : This function reads the current temperature
-// Input        : SparkFunMAX31855k::units _u: The units of temperature to return.
-//                C (default), K, R, or F
+// Input        : SparkFunMAX31855k::units _u: The units of temperature to
+//                  return. C (default), K, R, or F
 // Output       : Error messages before freezing
 // Return:      : float: The temperature in requested units.
 // Usage        : float tempC = <objectName>.read_temp();

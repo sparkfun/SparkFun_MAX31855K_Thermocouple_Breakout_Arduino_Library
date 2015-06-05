@@ -1,9 +1,9 @@
-/***************** MAX31855K_Thermocouple_Breakout_Example.ino *****************
+/**************** MAX31855K_Thermocouple_Digitizer_Example.ino *****************
  *                                                                             *
  * MAX31855K Thermocouple Breakout Example Code                                *
  * brent@sparkfun.com                                                          *
  * March 26th 2015                                                             *
- * https://github.com/sparkfun/MAX31855K_Thermocouple_Breakout                 *
+ * https://github.com/sparkfun/MAX31855K_Thermocouple_Digitizer                *
  *                                                                             *
  * Use the "serial monitor" window to read a temperature sensor.               *
  *                                                                             *

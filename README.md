@@ -1,46 +1,45 @@
-SparkFun <PRODUCT NAME> Arduino Library
+SparkFun MAX31855K Thermocouple Digitizer Arduino Library
 ========================================
 
-![SparkFun Part Name](URL for picture of part)
+![SparkFun Part Name](http://www.picgifs.com/graphics/c/cute/graphics-cute-160852.jpg)
 
-[*SparkFun Part Name (SKU)*](URL for product on Sparkfun.com)
+[*BOB-13266*](https://www.sparkfun.com/products/13266)
 
 <Basic description of the library.>
 
 Repository Contents
 -------------------
 
-* **/examples** - Example sketches for the library (.ino). Run these from the Arduino IDE. 
-* **/extras** - Additional documentation for the user. These files are ignored by the IDE. 
+* **LICENSE.md** - The license this library is distributed under.
+* **README.md** - This file!
+* **/examples** - Example sketche for the library (.ino). Run this from the Arduino IDE.
+* **keywords.txt** - Keywords from this library that will be highlighted in the Arduino IDE.
+* **library.properties** - General library properties for the Arduino package manager.
 * **/src** - Source files for the library (.cpp, .h).
-* **keywords.txt** - Keywords from this library that will be highlighted in the Arduino IDE. 
-* **library.properties** - General library properties for the Arduino package manager. 
 
 Documentation
 --------------
 
 * **[Installing an Arduino Library Guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library)** - Basic information on how to install an Arduino library.
-* **[Product Repository](GitHub Product URL)** - Main repository (including hardware files) for the <PRODUCT NAME>.
-* **[Hookup Guide](Learn.SparkFun URL)** - Basic hookup guide for the <PRODUCT NAME>.
+* **[Product Repository](https://github.com/sparkfun/MAX31855K_Thermocouple_Digitizer)** - Main repository (including hardware files) for the MAX31855K Thermocouple Digitizer.
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/max31855k-thermocouple-digitizer-hookup-guide)** - Basic hookup guide for the MAX31855K Thermocouple Digitizer.
 
-Products that use this Library 
+Products that use this Library
 ---------------------------------
 
-* [Part SKU](SparkFun part URL)- Basic part and short description here
-* [Part SKU](SparkFun part URL)- Basic part and short description here
+* [BOB-13266](https://www.sparkfun.com/products/13266) - MAX31855K Thermocouple Digitizer
 
 Version History
 ---------------
 
-* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) - Description 
-* [vEyyFyyZyyHyyLyySyy](URL for tag specific to this version) - Description
+* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) - Description
 
 License Information
 -------------------
 
-This product is _**open source**_! 
+This product is _**open source**_!
 
-The **code** is beerware; if you see me (or any other SparkFun employee) at the local, and you've found our code helpful, please buy us a round!
+**SparkFun code, firmware, and software is released under the MIT License(http://opensource.org/licenses/MIT).**
 
 Please use, reuse, and modify these files as you see fit. Please maintain attribution to SparkFun Electronics and release anything derivative under the same license.
 

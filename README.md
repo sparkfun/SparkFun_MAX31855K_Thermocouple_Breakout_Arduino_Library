@@ -1,7 +1,7 @@
-SparkFun MAX31855K Thermocouple Digitizer Arduino Library
+SparkFun MAX31855K Thermocouple Breakout Arduino Library
 ========================================
 
-![MAX31855K Thermocouple Digitizer](http://www.picgifs.com/graphics/c/cute/graphics-cute-160852.jpg)
+![MAX31855K Thermocouple Breakout](https://cdn.sparkfun.com/assets/learn_tutorials/3/3/1/MAX31855K_Thermocouple_Digitizer_Hookup_Guide-05.jpg)
 
 [*SEN-13266*](https://www.sparkfun.com/products/13266)
 
@@ -21,13 +21,13 @@ Documentation
 --------------
 
 * **[Installing an Arduino Library Guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library)** - Basic information on how to install an Arduino library.
-* **[Product Repository](https://github.com/sparkfun/MAX31855K_Thermocouple_Digitizer)** - Main repository (including hardware files) for the MAX31855K Thermocouple Digitizer.
-* **[Hookup Guide](https://learn.sparkfun.com/tutorials/max31855k-thermocouple-digitizer-hookup-guide)** - Basic hookup guide for the MAX31855K Thermocouple Digitizer.
+* **[Product Repository](https://github.com/sparkfun/MAX31855K_Thermocouple_Breakout)** - Main repository (including hardware files) for the MAX31855K Thermocouple Breakout.
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/max31855k-thermocouple-breakout-hookup-guide)** - Basic hookup guide for the MAX31855K Thermocouple Breakout.
 
 Products that use this Library
 ---------------------------------
 
-* [SEN-13266](https://www.sparkfun.com/products/13266) - MAX31855K Thermocouple Digitizer
+* [SEN-13266](https://www.sparkfun.com/products/13266) - MAX31855K Thermocouple Breakout
 
 Version History
 ---------------

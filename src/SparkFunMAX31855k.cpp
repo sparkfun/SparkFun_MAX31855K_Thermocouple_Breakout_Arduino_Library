@@ -92,9 +92,6 @@ void SparkFunMAX31855k::readBytes(void)
  
   digitalWrite(cs, HIGH);
 
-  // BHW Debug
-  Serial.print("readBytes::Read: 0b");
-  Serial.println(data.uint32, BIN);
   return;
 }
 

@@ -1,7 +1,7 @@
 SparkFun MAX31855K Thermocouple Digitizer Arduino Library
 ========================================
 
-![SparkFun Part Name](http://www.picgifs.com/graphics/c/cute/graphics-cute-160852.jpg)
+![MAX31855K Thermocouple Digitizer](http://www.picgifs.com/graphics/c/cute/graphics-cute-160852.jpg)
 
 [*BOB-13266*](https://www.sparkfun.com/products/13266)
 

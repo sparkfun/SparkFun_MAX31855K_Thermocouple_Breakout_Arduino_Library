@@ -156,11 +156,17 @@ float SparkFunMAX31855k::readCJT(void)
 
   readBytes();
 
-  checkHasFault();
+  if (checkHasFault())
+  {
+    return NAN;
+  }
 
-  if (data.uint32 & ((int32_t)1 << 15)) { // Sign extend negative numbers
+  if (data.uint32 & ((int32_t)1 << 15))
+  { // Sign extend negative numbers
     ret = 0xF000 | ((data.uint32 >> 4) & 0xFFF);
-  } else {
+  }
+  else
+  {
     ret = (data.uint32 >> 4) & 0xFFF;
   }
 

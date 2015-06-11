@@ -1,20 +1,20 @@
 SparkFun MAX31855K Thermocouple Breakout Arduino Library
 ========================================
 
-![MAX31855K Thermocouple Breakout](https://cdn.sparkfun.com/assets/learn_tutorials/3/3/1/MAX31855K_Thermocouple_Digitizer_Hookup_Guide-05.jpg)
+<img src="https://cdn.sparkfun.com/assets/learn_tutorials/3/3/1/MAX31855K_Thermocouple_Digitizer_Hookup_Guide-05.jpg" alt="MAX31855K Thermocouple Breakout" style="max-width:50%"/>
 
 [*SEN-13266*](https://www.sparkfun.com/products/13266)
 
-<Basic description of the library.>
+This library is used for interfacing the *SparkFun MAX31855K Thermocouple Breakout* board.  The library is configured by default to interface the board on pins D10-A1 of a [3.3V Arduino Pro Mini](https://www.sparkfun.com/products/11114).  The pins are configurable in the sketch, but this board runs at 3.3V. *Level shifting is needed if you are not using a 3.3V device to communicate with it*.
 
 Repository Contents
 -------------------
 
 * **LICENSE.md** - The license this library is distributed under.
 * **README.md** - This file!
-* **/examples** - Example sketche for the library (.ino). Run this from the Arduino IDE.
 * **keywords.txt** - Keywords from this library that will be highlighted in the Arduino IDE.
 * **library.properties** - General library properties for the Arduino package manager.
+* **/examples** - Example sketche for the library (.ino). Run this from the Arduino IDE.
 * **/src** - Source files for the library (.cpp, .h).
 
 Documentation
@@ -32,7 +32,7 @@ Products that use this Library
 Version History
 ---------------
 
-* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) - Description
+* [v1.0](https://www.sparkfun.com/products/13266) - Initial release of the *MAX31855K Thermocouple Breakout*
 
 License Information
 -------------------

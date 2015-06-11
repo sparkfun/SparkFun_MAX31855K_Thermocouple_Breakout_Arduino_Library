@@ -3,7 +3,7 @@ SparkFun MAX31855K Thermocouple Digitizer Arduino Library
 
 ![MAX31855K Thermocouple Digitizer](http://www.picgifs.com/graphics/c/cute/graphics-cute-160852.jpg)
 
-[*BOB-13266*](https://www.sparkfun.com/products/13266)
+[*SEN-13266*](https://www.sparkfun.com/products/13266)
 
 <Basic description of the library.>
 
@@ -27,7 +27,7 @@ Documentation
 Products that use this Library
 ---------------------------------
 
-* [BOB-13266](https://www.sparkfun.com/products/13266) - MAX31855K Thermocouple Digitizer
+* [SEN-13266](https://www.sparkfun.com/products/13266) - MAX31855K Thermocouple Digitizer
 
 Version History
 ---------------

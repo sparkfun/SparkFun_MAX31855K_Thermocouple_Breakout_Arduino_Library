@@ -41,11 +41,6 @@
 
 #include <SPI.h> // Have to include this in the main sketch too... (Using SPI)
 
-// Note: Need to define these somewhere. Doing so at the top of the main sketch.
-//const uint8_t CHIP_SELECT_PIN = 10;
-//const uint8_t VCC = 14;
-//const uint8_t GND = 15;
-
 class SparkFunMAX31855k
 {
 public:
@@ -67,7 +62,7 @@ public:
   SparkFunMAX31855k(const uint8_t, const uint8_t, const uint8_t);
   ~SparkFunMAX31855k() {} // User responsible 4 reassigning pins & stopping SPI
 protected:
-  union {
+  union { // Union makes conversion from 4 bytes to an unsigned 32-bit int easy
     uint8_t bytes[4];
     uint32_t uint32;
   } data;

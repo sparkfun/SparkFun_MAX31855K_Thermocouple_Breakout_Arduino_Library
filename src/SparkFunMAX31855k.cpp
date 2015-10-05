@@ -24,8 +24,6 @@
  * Implementation of functions defined in SparkFunMAX31855k.h                  *
  ******************************************************************************/
 
-#include <Arduino.h>
-#include <SPI.h>
 #include "SparkFunMAX31855k.h"
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -41,7 +39,7 @@
 // Usage        : SparkFunMAX31855k <name>(<pinNumber>);
 ////////////////////////////////////////////////////////////////////////////////
 SparkFunMAX31855k::SparkFunMAX31855k(const uint8_t _cs, const uint8_t _vcc,
-    const uint8_t _gnd) : cs(_cs)
+    const uint8_t _gnd, const bool _debug) : cs(_cs), debug(_debug)
 {
   // Redundant with SPI library if using default SS
   pinMode(cs, OUTPUT);
@@ -51,10 +49,16 @@ SparkFunMAX31855k::SparkFunMAX31855k(const uint8_t _cs, const uint8_t _vcc,
   digitalWrite(cs, HIGH);
 
   // Setup two GPIOs as power and ground
-  pinMode(_gnd, OUTPUT);
-  digitalWrite(_gnd, LOW);
-  pinMode(_vcc, OUTPUT);
-  digitalWrite(_vcc, HIGH);
+  if (_gnd != NONE)
+  {
+    pinMode(_gnd, OUTPUT);
+    digitalWrite(_gnd, LOW);
+  }
+  if (_vcc != NONE)
+  {
+    pinMode(_vcc, OUTPUT);
+    digitalWrite(_vcc, HIGH);
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -176,28 +180,35 @@ float SparkFunMAX31855k::readCJT(void)
 ////////////////////////////////////////////////////////////////////////////////
 // Description  : This function checks the fault bits from the MAX31855K IC
 // Input        : None
-// Output       : None
+// Output       : Serial prints debug mesages if debug == true
 // Return:      : Fault bits that were high, or 8 for unknow & 0 for no faults
 // Usage        : checkHasFault();
 ////////////////////////////////////////////////////////////////////////////////
 uint8_t SparkFunMAX31855k::checkHasFault(void)
 {
   if (!data.uint32) {
-    Serial.println("All bits were zero.  Fishy...");
+    // If all bits are low, either it's not wired right, or we actually measured
+    // 0˚.  There is no way to tell. With debug turned on this will warn.
+    if (debug)
+      Serial.println(F("\nMAX31855K::All bits were zero.  Fishy..."));
   }
 
   if (data.uint32 & ((uint32_t)1<<16)) { // Bit D16 is high => fault
     if (data.uint32 & 1) {
-      Serial.println("\nMAX31855K::OC Fault: No Probe");
+      if (debug)
+        Serial.println(F("\nMAX31855K::OC Fault: No Probe"));
       return 0b1;
     } else if (data.uint32 & (1<<1)) {
-      Serial.println("\nMAX31855K::SCG Fault: Thermocouple is shorted to GND");
+      if (debug)
+        Serial.println(F("\nMAX31855K::SCG Fault: Thermocouple is shorted to GND"));
       return 0b10;
     } else if (data.uint32 & (1<<2)) {
-      Serial.println("\nMAX31855K::SCV Fault: Thermocouple is shorted to VCC");
+      if (debug)
+        Serial.println(F("\nMAX31855K::SCV Fault: Thermocouple is shorted to VCC"));
       return 0b100;
     } else {
-      Serial.println("\nMAX31855K::Unknown Fault");
+      if (debug)
+        Serial.println(F("\nMAX31855K::Unknown Fault"));
       return 0b1000;
     }
   } else {

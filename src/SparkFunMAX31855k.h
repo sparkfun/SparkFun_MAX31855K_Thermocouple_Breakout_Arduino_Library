@@ -39,7 +39,11 @@
 #ifndef _SPARKFUN_MAX31855K_h_
 #define _SPARKFUN_MAX31855K_h_
 
+#include <DebugMacros.h>
+#include <Arduino.h>
 #include <SPI.h> // Have to include this in the main sketch too... (Using SPI)
+
+const uint8_t NONE = 256; // This is used to indicate VCC or GND pin isn't used
 
 class SparkFunMAX31855k
 {
@@ -54,12 +58,15 @@ public:
   enum units {
     F, C, K, R
   };
+  // If non-zero will turn on serial debugging messages
+  uint8_t debug;
   // Returns the temperature in degrees F, K, R, or C (default if unspecified)
   float readTemp(SparkFunMAX31855k::units _u=C);
   // Returns the cold junction temperature in ˚C
   float readCJT(void);
 
-  SparkFunMAX31855k(const uint8_t, const uint8_t, const uint8_t);
+  SparkFunMAX31855k(const uint8_t, const uint8_t _vcc=NONE,
+                    const uint8_t _gnd=NONE, const bool _debug=0);
   ~SparkFunMAX31855k() {} // User responsible 4 reassigning pins & stopping SPI
 protected:
   union { // Union makes conversion from 4 bytes to an unsigned 32-bit int easy

@@ -39,7 +39,6 @@
 #ifndef _SPARKFUN_MAX31855K_h_
 #define _SPARKFUN_MAX31855K_h_
 
-#include <DebugMacros.h>
 #include <Arduino.h>
 #include <SPI.h> // Have to include this in the main sketch too... (Using SPI)
 

@@ -62,6 +62,17 @@ SparkFunMAX31855k::SparkFunMAX31855k(const uint8_t _cs, const uint8_t _vcc,
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// Change the cs pin
+////////////////////////////////////////////////////////////////////////////////
+void SparkFunMAX31855k::setCS(int pin)
+{
+  digitalWrite(cs, HIGH); // Make sure to set old cs high to disable the chip
+  cs = pin;               //change to new cs pin
+  pinMode(cs, OUTPUT);
+  digitalWrite(cs, HIGH);
+}
+
+////////////////////////////////////////////////////////////////////////////////
 // Deconstructor does nothing.  It's up to the user to re-assign
 // chip select pin if they want to use it for something else.  We don't call
 // SPI.end() in case there is another SPI device we don't want to kill.

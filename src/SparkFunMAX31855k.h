@@ -63,6 +63,9 @@ public:
   float readTemp(SparkFunMAX31855k::units _u=C);
   // Returns the cold junction temperature in ˚C
   float readCJT(void);
+  
+  // Pass a pin number to set as CS
+  void setCS(int pin);
 
   SparkFunMAX31855k(const uint8_t, const uint8_t _vcc=NONE,
                     const uint8_t _gnd=NONE, const bool _debug=0);
